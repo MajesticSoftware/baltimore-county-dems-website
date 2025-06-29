@@ -11,14 +11,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.baltimorecountydems.com'),
-  title: 'Baltimore County Democratic Party',
-  description: 'Building a stronger, more inclusive Baltimore County through Democratic values of equality, opportunity, and community.',
+  title: 'Baltimore County Democratic Central Committee',
+  description: 'The official Democratic Central Committee for Baltimore County, Maryland. Representing Democratic voters and advancing our values through local leadership.',
   keywords: 'Baltimore County, Democratic Party, Maryland Democrats, political party, volunteer, donate',
   openGraph: {
-    title: 'Baltimore County Democratic Party',
-    description: 'Building a stronger, more inclusive Baltimore County through Democratic values.',
+    title: 'Baltimore County Democratic Central Committee',
+    description: 'The official Democratic Central Committee for Baltimore County, Maryland.',
     url: 'https://www.baltimorecountydems.com',
-    siteName: 'Baltimore County Democratic Party',
+    siteName: 'Baltimore County Democratic Central Committee',
     images: [
       {
         url: '/og-image.jpg',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Baltimore County Democratic Party',
+    title: 'Baltimore County Democratic Central Committee',
     description: 'Building a stronger, more inclusive Baltimore County through Democratic values.',
     images: ['/og-image.jpg'],
   },

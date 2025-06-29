@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { ArrowRight, Users, Target, Heart, Globe } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About Us - Baltimore County Democratic Party',
+  title: 'About Us - Baltimore County Democratic Central Committee',
   description: 'Learn about our mission, vision, and values as we work to build a stronger, more inclusive Baltimore County through Democratic principles.',
 }
 
@@ -16,7 +16,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl font-light text-black mb-6">
-              About the Baltimore County Democratic Party
+              About the Baltimore County Democratic Central Committee
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               We are dedicated to building a stronger, more inclusive Baltimore County through 
@@ -144,7 +144,7 @@ export default function AboutPage() {
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-black leading-relaxed mb-6">
-                The Baltimore County Democratic Party has a proud history of fighting for progressive 
+                The Baltimore County Democratic Central Committee has a proud history of fighting for progressive 
                 values and representing the interests of working families in our community. Founded on 
                 the principles of the national Democratic Party, we have been a driving force for 
                 positive change in Baltimore County for decades.

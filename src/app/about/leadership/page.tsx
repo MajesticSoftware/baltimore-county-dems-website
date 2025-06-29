@@ -1,113 +1,96 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Mail, Phone, MapPin, ExternalLink, User } from 'lucide-react'
+import { Mail, Phone, MapPin, User, Users } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Leadership - Baltimore County Democratic Party',
-  description: 'Meet the dedicated leaders of the Baltimore County Democratic Party who work tirelessly to advance our values and serve our community.',
+  title: 'Central Committee Members - Baltimore County Democratic Central Committee',
+  description: 'Meet the elected members of the Baltimore County Democratic Central Committee representing districts throughout the county.',
 }
 
-interface Leader {
+interface CommitteeMember {
   id: string
   name: string
-  title: string
-  bio: string
-  accomplishments: string[]
+  district: string
+  bio?: string
   email?: string
   phone?: string
   photo?: string
-  yearsServed?: string
 }
 
-const leadership: Leader[] = [
-  {
-    id: '1',
-    name: 'Sarah Mitchell',
-    title: 'Chair, Baltimore County Democratic State Central Committee',
-    bio: 'Sarah has been a lifelong advocate for progressive values and has led the Baltimore County Democratic Party with distinction for over 6 years. A former educator and community organizer, she brings decades of experience in coalition building and grassroots organizing.',
-    accomplishments: [
-      'Led successful campaigns that elected 15 Democratic candidates in 2022',
-      'Increased party membership by 40% during her tenure',
-      'Established the Young Democrats mentorship program',
-      'Organized largest Unity Dinner in party history'
-    ],
-    email: 'chair@baltimorecountydems.com',
-    phone: '(410) 555-0100',
-    yearsServed: '2018 - Present'
-  },
-  {
-    id: '2',
-    name: 'Michael Rodriguez',
-    title: 'Vice Chair',
-    bio: 'Michael brings extensive experience in campaign management and voter outreach to his role as Vice Chair. A small business owner and father of three, he is passionate about economic development and education policy.',
-    accomplishments: [
-      'Managed successful County Executive campaign in 2018',
-      'Launched innovative voter registration drives',
-      'Built partnerships with local labor unions',
-      'Established scholarship fund for Democratic activists'
-    ],
-    email: 'vicechair@baltimorecountydems.com',
-    phone: '(410) 555-0101',
-    yearsServed: '2020 - Present'
-  },
-  {
-    id: '3',
-    name: 'Dr. Angela Washington',
-    title: 'Secretary',
-    bio: 'Dr. Washington is a retired public school principal and longtime civil rights advocate. She has been instrumental in developing the party\'s education platform and community outreach programs.',
-    accomplishments: [
-      'Developed comprehensive education policy platform',
-      'Organized annual Martin Luther King Jr. Day service events',
-      'Established partnerships with 20+ community organizations',
-      'Led successful school board candidate recruitment'
-    ],
-    email: 'secretary@baltimorecountydems.com',
-    yearsServed: '2019 - Present'
-  },
-  {
-    id: '4',
-    name: 'James Chen',
-    title: 'Treasurer',
-    bio: 'James is a CPA and financial advisor who ensures the party\'s fiscal responsibility and transparency. He has modernized the party\'s financial systems and established strong fundraising practices.',
-    accomplishments: [
-      'Implemented modern financial tracking systems',
-      'Increased fundraising efficiency by 60%',
-      'Established annual financial transparency reports',
-      'Created donor management database'
-    ],
-    email: 'treasurer@baltimorecountydems.com',
-    yearsServed: '2021 - Present'
-  },
-  {
-    id: '5',
-    name: 'Maria Santos',
-    title: 'Communications Director',
-    bio: 'Maria is a former journalist and communications professional who leads the party\'s messaging and media outreach efforts. She has built strong relationships with local media and expanded the party\'s digital presence.',
-    accomplishments: [
-      'Tripled social media engagement rates',
-      'Launched weekly newsletter with 5,000+ subscribers',
-      'Coordinated messaging for major campaigns',
-      'Established media training program for candidates'
-    ],
-    email: 'communications@baltimorecountydems.com',
-    yearsServed: '2020 - Present'
-  },
-  {
-    id: '6',
-    name: 'Robert Kim',
-    title: 'Volunteer Coordinator',
-    bio: 'Robert coordinates the party\'s extensive volunteer network and organizes community events. A retired union organizer, he brings decades of experience in grassroots mobilization.',
-    accomplishments: [
-      'Built volunteer network of 2,000+ active members',
-      'Organized 50+ community events annually',
-      'Established voter protection program',
-      'Created volunteer training curriculum'
-    ],
-    email: 'volunteers@baltimorecountydems.com',
-    yearsServed: '2019 - Present'
-  }
+const committeMembers: CommitteeMember[] = [
+  // District 6
+  { id: '1', name: 'Ed Crizer', district: 'District 6' },
+  { id: '2', name: 'Justin Holliday', district: 'District 6' },
+  { id: '3', name: 'Cory Edwards', district: 'District 6' },
+  { id: '4', name: 'Lakesha Hawes', district: 'District 6' },
+  { id: '5', name: 'Rodcita Gray', district: 'District 6' },
+  { id: '6', name: 'Sandra Skordalos', district: 'District 6' },
+  
+  // District 7A
+  { id: '7', name: 'Satish Chapargain', district: 'District 7A' },
+  { id: '8', name: 'Lydia Brown', district: 'District 7A' },
+  { id: '9', name: 'Nina McHugh', district: 'District 7A' },
+  { id: '10', name: 'Lauren Noël', district: 'District 7A' },
+  
+  // District 8
+  { id: '11', name: 'Charles Kropfelder', district: 'District 8' },
+  { id: '12', name: 'Deli Okafor', district: 'District 8' },
+  { id: '13', name: 'Margaret Forte', district: 'District 8' },
+  { id: '14', name: 'Shannon Sheetz', district: 'District 8' },
+  { id: '15', name: 'Brad Kroner', district: 'District 8' },
+  
+  // District 10
+  { id: '16', name: 'Shayla Marie Brooks', district: 'District 10' },
+  { id: '17', name: 'Danny Blount', district: 'District 10' },
+  { id: '18', name: 'Jennifer Dwyer', district: 'District 10' },
+  { id: '19', name: 'Jay Jalisi', district: 'District 10' },
+  { id: '20', name: 'Reginald Hatcher Jr.', district: 'District 10' },
+  { id: '21', name: 'Danita Tolson', district: 'District 10' },
+  
+  // District 11A
+  { id: '22', name: 'Linda Dorsey-Walker', district: 'District 11A' },
+  { id: '23', name: 'Tyrod Haynes', district: 'District 11A' },
+  
+  // District 11B
+  { id: '24', name: 'Lela Campbell', district: 'District 11B' },
+  { id: '25', name: 'Reece Peak', district: 'District 11B' },
+  { id: '26', name: 'Noel Levy', district: 'District 11B' },
+  { id: '27', name: 'Hannah Swird', district: 'District 11B' },
+  
+  // District 42A
+  { id: '28', name: 'Connor White', district: 'District 42A' },
+  { id: '29', name: 'Jyoti Mohan', district: 'District 42A' },
+  
+  // District 42B
+  { id: '30', name: 'Susan Lobas', district: 'District 42B' },
+  { id: '31', name: 'James Kraft', district: 'District 42B' },
+  
+  // District 43B
+  { id: '32', name: 'Cheryl Gottlieb', district: 'District 43B' },
+  { id: '33', name: 'Fergal Mullaly', district: 'District 43B' },
+  
+  // District 44A
+  { id: '34', name: 'John Sanick', district: 'District 44A' },
+  { id: '35', name: 'Charlotte Wood', district: 'District 44A' },
+  
+  // District 44B
+  { id: '36', name: 'Ian Miller', district: 'District 44B' },
+  { id: '37', name: 'Sherida Morrison', district: 'District 44B' },
+  { id: '38', name: 'Shazia Shah', district: 'District 44B' },
+  { id: '39', name: 'Bishop Barry Chapman', district: 'District 44B' },
 ]
+
+// Group members by district
+const membersByDistrict = committeMembers.reduce((acc, member) => {
+  if (!acc[member.district]) {
+    acc[member.district] = []
+  }
+  acc[member.district].push(member)
+  return acc
+}, {} as Record<string, CommitteeMember[]>)
+
+const districtOrder = ['District 6', 'District 7A', 'District 8', 'District 10', 'District 11A', 'District 11B', 'District 42A', 'District 42B', 'District 43B', 'District 44A', 'District 44B']
 
 export default function LeadershipPage() {
   return (
@@ -117,141 +100,234 @@ export default function LeadershipPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl font-light text-black mb-6">
-              Our Leadership Team
+              Central Committee Members
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Meet the dedicated volunteers who lead the Baltimore County Democratic Party 
-              and work tirelessly to advance our values and serve our community.
+              Meet the elected members of the Baltimore County Democratic Central Committee. 
+              These dedicated volunteers represent Democratic voters in districts throughout 
+              Baltimore County and work to advance our shared values.
             </p>
             <Button size="lg" asChild>
               <Link href="/get-involved/volunteer">
-                Join Our Team
+                Get Involved
               </Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Leadership Grid */}
+      {/* About Central Committee */}
       <section className="bg-blue-50 py-16 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {leadership.map((leader) => (
-              <div
-                key={leader.id}
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-8 border border-blue-100"
-              >
-                {/* Leader Header */}
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-blue-200">
-                    {leader.photo ? (
-                      <img 
-                        src={leader.photo} 
-                        alt={leader.name}
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                    ) : (
-                      <User className="w-10 h-10 text-blue-600" />
-                    )}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-medium text-black mb-1">
-                      {leader.name}
-                    </h3>
-                    <p className="text-blue-600 font-medium mb-2">{leader.title}</p>
-                    {leader.yearsServed && (
-                      <p className="text-sm text-gray-600">
-                        Service: {leader.yearsServed}
-                      </p>
-                    )}
-                  </div>
-                </div>
-
-                {/* Bio */}
-                <p className="text-black mb-6 leading-relaxed">
-                  {leader.bio}
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-light text-black mb-8 text-center">
+              About the Central Committee
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white rounded-xl p-6 border border-blue-100">
+                <h3 className="text-xl font-medium text-black mb-4">Our Role</h3>
+                <p className="text-black leading-relaxed mb-4">
+                  The Baltimore County Democratic Central Committee is the official governing 
+                  body of the Democratic Party in Baltimore County. We coordinate party activities, 
+                  support Democratic candidates, and work to advance Democratic values throughout 
+                  the county.
                 </p>
-
-                {/* Key Accomplishments */}
-                <div className="mb-6">
-                  <h4 className="text-lg font-medium text-black mb-3">
-                    Key Accomplishments
-                  </h4>
-                  <ul className="space-y-2">
-                    {leader.accomplishments.slice(0, 3).map((accomplishment, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="text-blue-600 mr-2 mt-1">•</span>
-                        <span className="text-black text-sm">{accomplishment}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Contact Info */}
-                <div className="space-y-2 pt-4 border-t border-gray-100">
-                  {leader.email && (
-                    <div className="flex items-center text-sm text-gray-600">
-                      <Mail className="w-4 h-4 mr-2 text-gray-400" />
-                      <a href={`mailto:${leader.email}`} className="hover:text-blue-600 transition-colors">
-                        {leader.email}
-                      </a>
-                    </div>
-                  )}
-                  {leader.phone && (
-                    <div className="flex items-center text-sm text-gray-600">
-                      <Phone className="w-4 h-4 mr-2 text-gray-400" />
-                      <a href={`tel:${leader.phone}`} className="hover:text-blue-600 transition-colors">
-                        {leader.phone}
-                      </a>
-                    </div>
-                  )}
-                </div>
+                <ul className="space-y-2 text-black">
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>Organize party events and activities</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>Support Democratic candidates for office</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>Coordinate voter outreach and registration</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>Advocate for Democratic policies and values</span>
+                  </li>
+                </ul>
               </div>
-            ))}
+
+              <div className="bg-white rounded-xl p-6 border border-blue-100">
+                <h3 className="text-xl font-medium text-black mb-4">How We're Elected</h3>
+                <p className="text-black leading-relaxed mb-4">
+                  Central Committee members are elected by Democratic voters in each district 
+                  during the primary election every four years. Each district elects multiple 
+                  representatives to ensure broad representation across the county.
+                </p>
+                <ul className="space-y-2 text-black">
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>Elected every four years during primary elections</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>Must be registered Democrats in their district</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>Serve four-year terms as volunteers</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>Meet monthly to coordinate party activities</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Committee Members by District */}
+      <section className="bg-white py-16 lg:py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-light text-black mb-4">
+              Our Committee Members
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Central Committee members organized by legislative district
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {districtOrder.map((district) => {
+              const members = membersByDistrict[district] || []
+              return (
+                <div key={district} className="bg-blue-50 rounded-xl p-6 border border-blue-100">
+                  <div className="flex items-center mb-6">
+                    <Users className="w-6 h-6 text-blue-600 mr-3" />
+                    <h3 className="text-2xl font-medium text-black">{district}</h3>
+                    <span className="ml-auto text-sm text-gray-600">
+                      {members.length} member{members.length !== 1 ? 's' : ''}
+                    </span>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {members.map((member) => (
+                      <div
+                        key={member.id}
+                        className="bg-white rounded-lg p-4 border border-blue-200 hover:shadow-sm transition-shadow"
+                      >
+                        <div className="flex items-start space-x-3">
+                          <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-blue-200">
+                            {member.photo ? (
+                              <img 
+                                src={member.photo} 
+                                alt={member.name}
+                                className="w-full h-full rounded-full object-cover"
+                              />
+                            ) : (
+                              <User className="w-6 h-6 text-blue-600" />
+                            )}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h4 className="text-lg font-medium text-black truncate">
+                              {member.name}
+                            </h4>
+                            <p className="text-sm text-blue-600">{member.district}</p>
+                            
+                            {member.bio && (
+                              <p className="text-sm text-black mt-2 line-clamp-2">
+                                {member.bio}
+                              </p>
+                            )}
+
+                            {(member.email || member.phone) && (
+                              <div className="mt-3 space-y-1">
+                                {member.email && (
+                                  <div className="flex items-center text-xs text-gray-600">
+                                    <Mail className="w-3 h-3 mr-1" />
+                                    <a href={`mailto:${member.email}`} className="hover:text-blue-600 transition-colors truncate">
+                                      {member.email}
+                                    </a>
+                                  </div>
+                                )}
+                                {member.phone && (
+                                  <div className="flex items-center text-xs text-gray-600">
+                                    <Phone className="w-3 h-3 mr-1" />
+                                    <a href={`tel:${member.phone}`} className="hover:text-blue-600 transition-colors">
+                                      {member.phone}
+                                    </a>
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
 
       {/* Get Involved */}
-      <section className="bg-white py-16 lg:py-24">
+      <section className="bg-blue-50 py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-light text-black mb-6">
-              Ready to Lead?
+              Want to Get Involved?
             </h2>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              The Baltimore County Democratic Party is always looking for dedicated volunteers 
-              to take on leadership roles. Whether you're interested in running for office, 
-              organizing events, or leading committees, there's a place for you on our team.
+            <p className="text-lg text-black mb-8 leading-relaxed">
+              The Central Committee is always looking for dedicated Democrats to help 
+              with party activities. Whether you want to volunteer for campaigns, help 
+              with events, or consider running for Central Committee yourself, there 
+              are many ways to get involved.
             </p>
-            
-            <div className="grid sm:grid-cols-3 gap-4 mb-8">
-              <div className="bg-blue-50 rounded-lg p-6 border border-blue-100">
-                <h3 className="text-lg font-medium text-black mb-2">Committee Chairs</h3>
-                <p className="text-black text-sm">Lead issue-based committees and policy development</p>
+
+            <div className="grid sm:grid-cols-3 gap-6 mb-8">
+              <div className="bg-white rounded-lg p-6 border border-blue-100">
+                <h3 className="text-lg font-medium text-black mb-3">Volunteer</h3>
+                <p className="text-black text-sm mb-4">
+                  Help with voter outreach, events, and campaign support activities.
+                </p>
+                <Button size="sm" variant="outline" asChild>
+                  <Link href="/get-involved/volunteer">
+                    Volunteer Now
+                  </Link>
+                </Button>
               </div>
-              <div className="bg-blue-50 rounded-lg p-6 border border-blue-100">
-                <h3 className="text-lg font-medium text-black mb-2">Event Organizers</h3>
-                <p className="text-black text-sm">Plan and execute fundraisers, rallies, and community events</p>
+
+              <div className="bg-white rounded-lg p-6 border border-blue-100">
+                <h3 className="text-lg font-medium text-black mb-3">Join a Club</h3>
+                <p className="text-black text-sm mb-4">
+                  Connect with Democrats in your area through local Democratic clubs.
+                </p>
+                <Button size="sm" variant="outline" asChild>
+                  <Link href="/about/clubs">
+                    Find a Club
+                  </Link>
+                </Button>
               </div>
-              <div className="bg-blue-50 rounded-lg p-6 border border-blue-100">
-                <h3 className="text-lg font-medium text-black mb-2">Campaign Leaders</h3>
-                <p className="text-black text-sm">Manage campaigns for Democratic candidates at all levels</p>
+
+              <div className="bg-white rounded-lg p-6 border border-blue-100">
+                <h3 className="text-lg font-medium text-black mb-3">Run for Committee</h3>
+                <p className="text-black text-sm mb-4">
+                  Consider running for Central Committee in the next primary election.
+                </p>
+                <Button size="sm" variant="outline" asChild>
+                  <Link href="/get-involved/run-for-office">
+                    Learn More
+                  </Link>
+                </Button>
               </div>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4">
-              <Button size="lg" asChild>
-                <Link href="/get-involved/volunteer">
-                  Volunteer Today
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="/about/run-for-office">
-                  Run for Office
-                </Link>
-              </Button>
-            </div>
+            <Button size="lg" asChild>
+              <Link href="mailto:info@baltimorecountydems.com">
+                Contact the Central Committee
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

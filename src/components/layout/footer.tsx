@@ -41,11 +41,11 @@ export function Footer() {
               </div>
               <div>
                 <div className="font-bold text-white">Baltimore County</div>
-                <div className="text-sm text-blue-300">Democratic Party</div>
+                <div className="text-sm text-blue-300">Democratic Central Committee</div>
               </div>
             </div>
             <p className="text-sm mb-4 max-w-md">
-              Building a stronger, more inclusive Baltimore County through Democratic values of equality, opportunity, and community.
+              The official Democratic Central Committee for Baltimore County, Maryland. Representing Democratic voters and advancing our values through local leadership.
             </p>
             
             {/* Contact Info */}
@@ -170,7 +170,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-center md:text-left">
-              © {new Date().getFullYear()} Baltimore County Democratic Party. All rights reserved.
+              © {new Date().getFullYear()} Baltimore County Democratic Central Committee. All rights reserved.
             </div>
             <div className="flex items-center space-x-6 text-sm">
               <Link href="/privacy" className="hover:text-blue-300 transition-colors">
@@ -186,7 +186,7 @@ export function Footer() {
           </div>
           
           <div className="mt-4 text-xs text-gray-500 text-center md:text-left">
-            Paid for by the Baltimore County Democratic State Central Committee. Not authorized by any candidate or candidate's committee.
+            Paid for by the Baltimore County Democratic Central Committee. Not authorized by any candidate or candidate's committee.
           </div>
         </div>
       </div>

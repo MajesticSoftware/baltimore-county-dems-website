@@ -20,7 +20,7 @@ export function Hero() {
                 BALTIMORE COUNTY
               </h1>
               <p className="text-xl lg:text-2xl text-black mb-8 animate-fade-up animation-delay-100 font-light">
-                Democratic Party
+                Democratic Central Committee
               </p>
               
               <h2 className="text-2xl lg:text-3xl text-black mb-6 animate-fade-up animation-delay-200 font-light leading-relaxed">

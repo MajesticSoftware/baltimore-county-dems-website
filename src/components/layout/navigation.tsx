@@ -79,7 +79,7 @@ export function Navigation() {
           <Link href="/" className="flex items-center space-x-3">
             <div>
               <div className="text-xl font-bold text-blue-600 tracking-tight">BALTIMORE COUNTY</div>
-              <div className="text-sm font-normal text-gray-600 tracking-wide">Democratic Party</div>
+              <div className="text-sm font-normal text-gray-600 tracking-wide">Democratic Central Committee</div>
             </div>
           </Link>
 
