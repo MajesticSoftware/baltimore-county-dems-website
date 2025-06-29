@@ -845,8 +845,3 @@ export default function MembershipPage() {
   )
 }
 
-export const metadata = {
-  title: 'Membership | Baltimore County Democratic Central Committee',
-  description: 'Join the Baltimore County Democratic Central Committee and become part of our community working for Democratic values. Choose from multiple membership tiers with exclusive benefits and opportunities.',
-  keywords: 'Baltimore County Democrats, Democratic membership, political involvement, Democratic Central Committee, voter engagement',
-}

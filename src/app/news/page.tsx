@@ -2,13 +2,12 @@
 
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
-import { Metadata } from 'next'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { 
   Search, 
   Filter, 
-  Calendar as CalendarIcon, 
+  Calendar, 
   User, 
   ExternalLink,
   Mail,
@@ -745,7 +744,7 @@ export default function NewsPage() {
                       <span>{selectedArticle.author}</span>
                     </div>
                     <div className="flex items-center">
-                      <CalendarIcon className="h-4 w-4 mr-1" />
+                      <Calendar className="h-4 w-4 mr-1" />
                       <span>{selectedArticle.publishDate.toLocaleDateString()}</span>
                     </div>
                     <div className="flex items-center">
